@@ -11,7 +11,7 @@ function CreatePost({ isAuth }) {
   const publishBlog = () => {
     Axios.post('https://blogswebsite-backend.onrender.com/makePost', { title: title, description: description, user: String(auth.currentUser.displayName), date: new Date })
       .then(() => {
-        navigate('/posts')
+        navigate('/')
       })
       .catch((err) => {
         alert(err)

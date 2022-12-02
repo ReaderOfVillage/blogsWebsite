@@ -29,7 +29,7 @@ function App() {
             </>
           ) : (
             <>
-              <Link to="/posts">Read Posts</Link>
+              <Link to="/">Posts</Link>
               <Link to="/makePost">Create Post</Link>
               <button onClick={signUserOut}>Log Out</button>
             </>
