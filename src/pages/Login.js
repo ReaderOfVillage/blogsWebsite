@@ -12,7 +12,7 @@ function Login({ setIsAuth }) {
             localStorage.setItem("isAuth", true)
             localStorage.setItem("user", String(auth.currentUser.displayName))
             setIsAuth(true)
-            navigate("/posts")
+            navigate("/")
         })
     }
 
