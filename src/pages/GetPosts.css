@@ -1,0 +1,11 @@
+.post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postContainer {
+    display: flex;
+    justify-content: center;
+    
+}
