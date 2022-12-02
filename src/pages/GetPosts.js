@@ -6,7 +6,7 @@ function GetPosts({ isAuth }) {
   const user = localStorage.getItem("user")
 
   useEffect(() => {
-    Axios.get("https://blogs-website-backend.herokuapp.com/read")
+    Axios.get("https://blogswebsite-backend.onrender.com/read")
       .then((response) => {
         setListOfBlogs(response.data)
       })
@@ -16,13 +16,13 @@ function GetPosts({ isAuth }) {
   }, [listOfBlogs])
 
   const deletePost = (id) => {
-    Axios.delete(`https://blogs-website-backend.herokuapp.com/delete/${id}`)
+    Axios.delete(`https://blogswebsite-backend.onrender.com/delete/${id}`)
   }
 
   const updatePost = (id) => {
     const newPost = prompt("Enter the new post: ")
 
-    Axios.put("https://blogs-website-backend.herokuapp.com/update", { newPost: newPost, id: id }).then(() => {
+    Axios.put("https://blogswebsite-backend.onrender.com/update", { newPost: newPost, id: id }).then(() => {
       setListOfBlogs(listOfBlogs.map((val) => {
         return val._id == id ? {_id: id, title: val.title, description: newPost} : val
       }))

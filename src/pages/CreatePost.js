@@ -9,7 +9,7 @@ function CreatePost({ isAuth }) {
   const [description, setDescription] = useState("")
 
   const publishBlog = () => {
-    Axios.post('https://blogs-website-backend.herokuapp.com/makePost', { title: title, description: description, user: String(auth.currentUser.displayName), date: new Date })
+    Axios.post('https://blogswebsite-backend.onrender.com/makePost', { title: title, description: description, user: String(auth.currentUser.displayName), date: new Date })
       .then(() => {
         navigate('/posts')
       })
