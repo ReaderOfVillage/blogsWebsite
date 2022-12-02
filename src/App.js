@@ -25,7 +25,7 @@ function App() {
         {!isAuth ? (
             <>
               <Link to="/login">Login</Link>  
-              <Link to="/posts">Read Posts</Link>
+              <Link to="/">Posts</Link>
             </>
           ) : (
             <>
@@ -37,7 +37,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/makePost" element={<CreatePost isAuth={isAuth} />} />  
-        <Route path="/posts" element={<GetPosts isAuth={isAuth} auth={auth} />} />
+        <Route path="/" element={<GetPosts isAuth={isAuth} auth={auth} />} />
         <Route path="/login" element={<Login setIsAuth={ setIsAuth } />} />
       </Routes> 
     </Router> 
