@@ -36,9 +36,9 @@ function App() {
           )}
       </nav>
       <Routes>
-        <Route path="/makePost" element={<CreatePost isAuth={isAuth} />} />  
-        <Route path="/" element={<GetPosts isAuth={isAuth} auth={auth} />} />
-        <Route path="/login" element={<Login setIsAuth={ setIsAuth } />} />
+        <Route exact path="/makePost" element={<CreatePost isAuth={isAuth} />} />  
+        <Route exact path="/" element={<GetPosts isAuth={isAuth} auth={auth} />} />
+        <Route exact path="/login" element={<Login setIsAuth={ setIsAuth }  />} />
       </Routes> 
     </Router> 
   );
